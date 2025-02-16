@@ -8,7 +8,7 @@ console = Console()
 if len(sys.argv) == 1:
   print("no file entered")
   sys.exit(0)
-if len(sys.argv) == 3 and sys.argv[2] == "md":
+if len(sys.argv) == 3 and sys.argv[2] == "--md":
   print(os.getcwd())
   path = os.getcwd() + "/"
   file = open(path + sys.argv[1],'r')
