@@ -3,5 +3,8 @@ import sys
 from rich.console import Console
 from rich.syntax import Syntax
 console = Console()
+if len(sys.argv) = 0:
+  print("no file entered)
+  quit()
 syntax = Syntax.from_path(sys.argv[1], line_numbers=True)
 console.print(syntax)
