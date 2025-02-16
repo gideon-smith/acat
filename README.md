@@ -9,3 +9,8 @@ chmod +x install.sh
 ./install.sh
 ```
 congrats you have installed acat!
+#use
+to run acat run:
+```
+acat <arguments>
+```
