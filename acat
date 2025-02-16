@@ -12,7 +12,8 @@ if len(sys.argv) == 3 and sys.argv[2] == "md":
   print(os.getcwd())
   path = os.getcwd() + "/"
   file = open(path + sys.argv[1])
-  value_to_return = Markdown(file.read)
+  file_content = file.read
+  value_to_return = Markdown(file_content)
   file.close
 else :
   value_to_return = Syntax.from_path(sys.argv[1], line_numbers=True)
