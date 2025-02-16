@@ -2,9 +2,15 @@
 import sys
 from rich.console import Console
 from rich.syntax import Syntax
+from rich.markdown import Markdown
 console = Console()
 if len(sys.argv) == 1:
   print("no file entered")
   sys.exit(0)
-syntax = Syntax.from_path(sys.argv[1], line_numbers=True)
-console.print(syntax)
+if len(sys.argv) == 3 and sys.argv[2] == "md":
+  file = open(sys.argv[1])
+  value_to_return = Markdown(file.read)
+  file.close
+else :
+  value_to_return = Syntax.from_path(sys.argv[1], line_numbers=True)
+console.print(value_to_return)
