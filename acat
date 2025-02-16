@@ -9,6 +9,7 @@ if len(sys.argv) == 1:
   print("no file entered")
   sys.exit(0)
 if len(sys.argv) == 3 and sys.argv[2] == "md":
+  print(os.getcwd())
   file = open(os.getcwd() + sys.argv[1])
   value_to_return = Markdown(file.read)
   file.close
