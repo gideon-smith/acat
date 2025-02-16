@@ -3,12 +3,13 @@ import sys
 from rich.console import Console
 from rich.syntax import Syntax
 from rich.markdown import Markdown
+import os
 console = Console()
 if len(sys.argv) == 1:
   print("no file entered")
   sys.exit(0)
 if len(sys.argv) == 3 and sys.argv[2] == "md":
-  file = open(sys.argv[1])
+  file = open(os.getcwd() + sys.argv[1])
   value_to_return = Markdown(file.read)
   file.close
 else :
