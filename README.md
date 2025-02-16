@@ -4,9 +4,9 @@ acat stands for advanced cat acat uses the python library rich to perform syntax
 ## linux
 run these comands:
 ```
-sudo cd acat
+cd acat
 chmod +x install.sh
-./install.sh
+sudo bash install.sh
 ```
 congrats you have installed acat!
 
