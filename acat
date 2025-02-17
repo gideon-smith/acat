@@ -9,12 +9,15 @@ if len(sys.argv) == 1:
   print("no file entered")
   sys.exit(0)
 if len(sys.argv) == 3 and sys.argv[2] == "--md":
-  print(os.getcwd())
   path = os.getcwd() + "/"
   file = open(path + sys.argv[1],'r')
   file_content = file.read
   value_to_return = Markdown(str(file_content()))
   file.close
+elif len(sys.argv) == 3 :
+  value_to_return = Syntax.from_path(sys.argv[1], line_numbers=True, line_range = (int(sys.argv[2]),int(sys.argv[2])))
+elif len(sys.argv) == 4 :
+  value_to_return = Syntax.from_path(sys.argv[1], line_numbers=True, line_range = (int(sys.argv[2]),int(sys.argv[3])))
 else :
   value_to_return = Syntax.from_path(sys.argv[1], line_numbers=True)
 console.print(value_to_return)
